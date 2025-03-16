@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>testapi</name>
+    </assembly>
+    <members>
+        <member name="M:testapi.Controllers.MemberController.GetById(System.Int32)">
+            <summary>
+            Get a member by ID.
+            </summary>
+            <param name="id">The ID of the member</param>
+            <returns>A member object</returns>
+        </member>
+        <member name="M:testapi.Controllers.MemberController.Create(testapi.Entities.Member)">
+            <summary>
+            Create a new member.
+            </summary>
+            <param name="member">The member to create</param>
+            <returns>The created member object</returns>
+        </member>
+        <member name="M:testapi.Controllers.MemberController.Update(System.Int32,testapi.Entities.Member)">
+            <summary>
+            Update an existing member.
+            </summary>
+            <param name="id">The ID of the member to update</param>
+            <param name="member">The updated member object</param>
+            <returns>The updated member object</returns>
+        </member>
+        <member name="M:testapi.Controllers.MemberController.Delete(System.Int32)">
+            <summary>
+            Delete a member by ID.
+            </summary>
+            <param name="id">The ID of the member to delete</param>
+            <returns>Empty result</returns>
+        </member>
+        <member name="T:testapi.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:testapi.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:testapi.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:testapi.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
