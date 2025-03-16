@@ -45,11 +45,12 @@ jobs:
         uses: EnricoMi/publish-unit-test-result-action@v2
         if: always()
         with:
-          files: '**/test-results/test_results.junit.xml'
+          files: '**/test-results/test_results.xml'
+          token: ${{ github.token }}
 
       - name: ✅ Add Check Comments for Failed Code Lines
         uses: mikepenz/action-junit-report@v3
         if: always()
         with:
-          report_paths: '**/test-results/test_results.junit.xml'
+          report_paths: '**/test-results/test_results.xml'
           token: ${{ github.token }}
