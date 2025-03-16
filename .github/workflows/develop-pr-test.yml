@@ -6,7 +6,7 @@ on:
       - develop
 
 permissions:
-  contents: write-all
+  contents: write
 
 jobs:
   test:
