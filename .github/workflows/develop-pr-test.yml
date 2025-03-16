@@ -11,12 +11,17 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Set up .NET
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v2
       with:
         dotnet-version: '5.0.x'
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libssl-dev
 
     - name: Restore dependencies
       run: dotnet restore
@@ -31,7 +36,7 @@ jobs:
       run: dotnet tool install --global trx2junit && trx2junit ./test-results/test_results.trx
 
     - name: 📑 Publish Test Results as PR Comment
-      uses: EnricoMi/publish-unit-test-result-action@v1
+      uses: EnricoMi/publish-unit-test-result-action@v2
       if: always()
       with:
         files: '**/test-results/test_results.junit.xml'
